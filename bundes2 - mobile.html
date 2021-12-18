@@ -1,0 +1,501 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel = 'stylesheet' href = 'bundes2_style_mobile.css'>
+<script src = 'bundes2_js_mobile.js'></script>
+<title>burussia dortmund</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+
+
+
+<style>
+
+
+
+</style>
+<body>
+
+<div id = 'grid_container'>
+  <div id = 'Bundesliga'><img id = 'bundes_img' src =  "Bundesliga_logo.svg" width = 200px;></div>
+    <div id = 'sns'>
+    <div id = 'insta'><a href="https://www.instagram.com/bvb09/?hl=ko" target="_blank"><img src = 'insta.svg' width = 25px;></a></div>
+      <div id = 'twitch'><a href="https://www.twitch.tv/bvb_official" target="_blank"><img  src = 'twitch.svg' width = 24px;></a></div>
+      <div id = 'facebook'><a href="https://www.facebook.com/BVB/" target="_blank"><img  src = 'facebook.svg' width = 12px;></a></div>
+    <div id = 'twitter'><a href="https://www.facebook.com/BVB/" target="_blank"><img  src = 'twitter.svg' width = 28px;></a></div>
+    </div>
+
+    <div id = 'bg_img'></div>
+  <!-- <div id = 'Echte_Liebe'>Ballspiel-Verein Borussia 09 e. V. Dortmund</div> -->
+
+
+<div id = 'top'></div>
+<!--엠블렘 -->
+  <div class = 'item' id = 'emblem' >
+  <img id = 'emblem_img' onclick = "roll_back(); player_rollback();" src ="도르트문트 엠블렘.png">
+  </div>
+
+  <div id = 'sponsor_grid'>
+		<a href="https://us.puma.com/" target="_blank"><img id = 'maker' src = "puma.png" width = 30px;></a>
+		<a href="https://www.1und1.de/" target="_blank"><img id = 'sponsor_img' src = "1&1_logo.svg.png" width = 30px;></a>
+	</div>
+
+
+  <div class = 'item' id = 'menubar'>
+    <div class = 'flex1_item' >HISTORY</div>
+
+    <div class = 'flex1_item' id = 'league' onclick = "
+			league_click();
+			league_click_dark();
+			box_line();
+			add_row();
+			player_rollback()">LEAGUE
+		</div>
+
+    <div class = 'flex1_item'>CHAMPS</div>
+
+    <div class = 'flex1_item'>FOKAL</div>
+
+    <div class = 'flex1_item' id = 'player' onclick = "
+ roll_back();	player_click(); player_list(); league_click_dark();">PLAYERS</div>
+
+    <div class = 'flex1_item'>SHOP</div>
+
+  </div>
+
+
+<div id = 'player_flex'>
+		<div id = 'position_director'>감독</div>
+	<div id = 'marco_rose'>
+		<figure id = 'director' class = 'player_figure'>
+			<div class = 'players'><img  id = 'director_img' src = '도르트문트 1군 선수 명단/마르코 로제.png'></div>
+
+			<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+				<div class = 'player_name'> | 마르코 로제</div>
+			</div>
+</figure>
+</div>
+
+<div id = 'position_gf'>GF</div>
+<div id = 'gf'>
+	<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/그레고어 코벨.png'></div>
+
+		<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
+			<div class = 'player_name'> | 그레고어 코벨</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+	<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/루카 운베하운.png'></div>
+
+	<div class = 'player_info_flex'>
+		<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 루카 운베하운</div>
+	</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마르빈 히츠.png'></div>
+
+			<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
+				<div class = 'player_name'> | 마르빈 히츠</div>
+			</div>
+</figure>
+
+<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/스테판 드라차.png'></div>
+
+		<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 스테판 드라차</div>
+		</div>
+</figure>
+
+<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/로만 뷔르키.png'></div>
+
+		<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
+			<div class = 'player_name'> | 로만 뷔르키</div>
+		</div>
+</figure>
+</div>
+
+<div id = 'position_df'>DF</div>
+<div id = 'df'>
+	<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/니코 슐츠.png'></div>
+
+		<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 니코 슐츠</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/단악셀 자가두.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/프랑스.svg'> </span>
+	<div class = 'player_name'> | 단악셀 자가두</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/라파엘 게레이루.png'></div>
+
+		<div class = 'player_info_flex'>
+		<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/포르투갈.svg'> </span>
+<div class = 'player_name'> | 라파엘 게레이루</div>
+	</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마누엘 아칸지.png'></div>
+
+		<div class = 'player_info_flex'>
+		<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
+<div class = 'player_name'> | 마누엘 아칸지</div>
+	</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마르셀 슈멜처.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+	<div class = 'player_name'> | 마르셀 슈멜처</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마린 폰그라치치.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/크로아티아.svg'> </span>
+	<div class = 'player_name'> | 마린 폰그라치치</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마츠 후멜스.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+	<div class = 'player_name'> | 마츠 훔멜스</div>
+		</div>
+	</figure>
+
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마테우 모레이 바우사.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스페인.svg'> </span>
+	<div class = 'player_name'> | 마테우 모레이 바우사</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/수마일라 쿨리발리.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/프랑스.svg'> </span>
+	<div class = 'player_name'> | 수마일라 쿨리발리</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/토마 뫼니에.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/벨기에.svg'> </span>
+	<div class = 'player_name'> | 토마 뫼니에</div>
+		</div>
+	</figure>
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/펠릭스 파슬라크.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+	<div class = 'player_name'> | 펠릭스 파슬라크</div>
+		</div>
+	</figure>
+
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/레나르트 말로니.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+	<div class = 'player_name'> | 레나르트 말로니</div>
+		</div>
+	</figure>
+
+
+	<figure class = 'player_figure'>
+			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마르코 파샬리치.png'></div>
+
+			<div class = 'player_info_flex'>
+			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/크로아티아.svg'> </span>
+	<div class = 'player_name'> | 마르코 파샬리치</div>
+		</div>
+	</figure>
+</div>
+
+
+<div id = 'position_mf'>MF</div>
+<div id = 'mf'>
+
+			<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/괴크탄 귀르퓌즈.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 괴크탄 귀르퓌즈</div>
+			</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마르코 로이스.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 마르코 로이스</div>
+				</div>
+			</figure>
+
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마흐무드 다후드.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 마흐무드 다후드</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/악셀 비첼.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/벨기에.svg'> </span>
+			<div class = 'player_name'> | 악셀 비첼</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/압둘라예 카마라.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/기니.svg'> </span>
+			<div class = 'player_name'> | 압둘라예 카마라</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/엠레 잔.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 엠레 잔</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/주드 벨링엄.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/잉글랜드.svg'> </span>
+			<div class = 'player_name'> | 주드 벨링엄</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/이마뉘얼 페라이.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/네덜란드.svg'> </span>
+			<div class = 'player_name'> | 이마뉘얼 페라이</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/안토니오스 파파도풀로스.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 안토니오스<br>파파도풀로스</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/토비아스 라슐.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 토비아스 라슐</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/조반니 레이나.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/미국.svg'> </span>
+			<div class = 'player_name'> | 조반니 레이나</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/율리안 브란트.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+			<div class = 'player_name'> | 율리안 브란트</div>
+				</div>
+			</figure>
+
+			<figure class = 'player_figure'>
+					<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/헤이니에르 제주스.png'></div>
+
+					<div class = 'player_info_flex'>
+					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/브라질.svg'> </span>
+			<div class = 'player_name'> | 헤이니에르 제주스</div>
+				</div>
+			</figure>
+</div>
+<div id = 'position_fw'>FW</div>
+	<div id = 'fw'>
+
+				<figure class = 'player_figure'>
+						<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/도니얼 말런.png'></div>
+
+						<div class = 'player_info_flex'>
+						<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/네덜란드.svg'> </span>
+				<div class = 'player_name'> | 도니얼 말런</div>
+					</div>
+				</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마리우스 볼프.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 마리우스 볼프</div>
+			</div>
+		</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/슈테판 티게스.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 슈테판 티게스</div>
+			</div>
+		</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/안스가르 크나우프.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 안스가르 크나우프</div>
+			</div>
+		</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/엘링 홀란.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/노르웨이.svg'> </span>
+		<div class = 'player_name'> | 엘링 홀란</div>
+			</div>
+		</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/유수파 무코코.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+		<div class = 'player_name'> | 유수파 무코코</div>
+			</div>
+		</figure>
+
+
+		<figure class = 'player_figure'>
+				<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/토르간 아자르.png'></div>
+
+				<div class = 'player_info_flex'>
+				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/벨기에.svg'> </span>
+		<div class = 'player_name'> | 토르강 아자르</div>
+			</div>
+		</figure>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = 'line'></div>
+<div id = 'line_player'></div>
+  <div class = 'item'></div>
+    <div id = 'stdm_inside'></div>
+
+
+<div id = 'top_bar'></div>
+<div id='full_name'>ECHTE LIEBE.</div>
+<div id='footer'></div>
+<div id = 'top_icon'><a href = "#top"><img src = "top_icon.svg" width = 50px;></a>
+</div>
+<table id = 'table_container' height = '10px'>
+	<th class = 'table_header' id = 'team'>팀</th>
+	<th class = 'table_header' id = 'round'>경기수</th>
+	<th class = 'table_header' id = 'win'>승</th>
+	<th class = 'table_header' id = 'draw'>무</th>
+	<th class = 'table_header' id = 'defeat'>패</th>
+	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'table_header' id = 'lose'>실점</th>
+	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'table_header' id = 'score'>승점</th>
+	<tbody id = 'add_table'>
+	</tbody>
+</table>
+<div id = 'ole'>Olé,<br>jetzt kommt<br>Der BVB</div>
+
+
+</div>
+
+</body>
+</html>
