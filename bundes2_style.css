@@ -7,28 +7,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Open+Sans+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+KR:wght@200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Black';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 
 #table_container{
 	text-align: center;
-	grid-column: 4/7;
-	grid-row: 3/7;
+	grid-column: 3/8;
+	grid-row: 5/7;
 	z-index: 2;
 	opacity: 0;
 	border-spacing: 0 10px;
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-left: 20px;
 	margin-right: 20px;
-	height : 88%;
-  font-family: 'Noto sans KR', serif;
+	height : 87%;
+  font-family: 'Pretendard-Regular';
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 16px;
 
+}
+
+
+.champs_info{
+  	text-align: center;
+  grid-column: 3/8;
+	grid-row: 5/7;
+	z-index: 5;
+	border-spacing: 0 7px;
+	margin-left: 20px;
+	margin-right: 20px;
+  font-family: 'Pretendard-Regular';
+	font-weight: 400;
+	font-size: 14.5px;
+  margin-bottom: 25px;
+}
+
+#champs_flex{
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  grid-column: 3/8;
+  grid-row: 5/7;
+  z-index: 5;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.group{
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  font-weight: 400;
+  margin-left: 20px;
+	margin-right: 20px;
 }
 
 
 body{
   margin : 0px;
   padding: 0px;
+	box-sizing: border-box;
 }
 
 
@@ -36,14 +95,15 @@ body{
 #grid_container{
   display: grid;
   grid-template-columns:80px repeat(7, 1fr) 80px;
-  grid-template-rows:60px 100px 100px 50px 40px 570px 10px 1000px 60px;
+  grid-template-rows:60px 100px 100px 55px 40px 900px 0px 1000px 60px;
   margin:0px;
     margin-top: 0px;
 }
 
 #emblem{
-  grid-column: 2/3;
-  grid-row: 2/4;
+position: absolute;
+top: 50px;
+left:40px;
   align-self: baseline;
   justify-self : left;
   cursor: pointer;
@@ -57,8 +117,8 @@ body{
 
 #menubar{
   color : white;
-  grid-column : 4/7;
-  grid-row: 2/3;
+  grid-column : 3/8;
+  grid-row: 4/5;
   align-items:  center;
   width:100%;
   justify-items: center;
@@ -66,7 +126,7 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 600;
   justify-content: space-evenly;
-  margin-top: 40px;
+
 
   border-top: 1px solid rgba(255, 255, 255);
   border-left: 1px solid rgba(255, 255, 255);
@@ -179,7 +239,8 @@ body{
 
 #insta{
 	opacity:0.7;
-  transition: 'opacity,' 0.1s linear;
+  transition: 'opacity' 0.1s linear;
+  transition: 'scale' 0.1s linear;
   margin-right: 21px;
 }
 #insta:hover{
@@ -269,7 +330,7 @@ height: 60px;
   }
 
   100%{
-    height: 690px;
+    height: 870px;
     opacity: 1;
     background-color: white;
   }
@@ -277,7 +338,7 @@ height: 60px;
 @keyframes line_fold{
   0%{
 
-			height: 690px;
+			height: 870px;
 			opacity: 1;
 			background-color: white;
   }
@@ -291,7 +352,7 @@ height: 60px;
 
 @keyframes line_player_fold{
   0%{
-    height: 690px;
+    height: 870px;
     opacity: 1;
     background-color: white;
   }
@@ -302,17 +363,40 @@ height: 60px;
 @keyframes line_player{
 	0%{
     height: 0px;
-      opacity: 1;
-      background-color: white;
+    opacity: 1;
+    background-color: white;
   }
 
   100%{
-    height: 690px;
+    height: 870px;
     opacity: 1;
     background-color: white;
   }
 }
 
+@keyframes line_champs_fold{
+  0%{
+    height: 870px;
+    opacity: 1;
+    background-color: white;
+  }
+  100%{
+  bottom : 0;
+  }
+}
+@keyframes line_champs{
+	0%{
+    height: 0px;
+    opacity: 1;
+    background-color: white;
+  }
+
+  100%{
+    height: 870px;
+    opacity: 1;
+    background-color: white;
+  }
+}
 
 #top_bar{
   grid-column: 1/10;
@@ -324,16 +408,17 @@ height: 60px;
   justify-self: right;
 }
 #full_name{
-grid-column: 1/9;
-align-self: center;
+grid-column: 2/10;
+align-self: start;
 justify-self : center;
 grid-row: 1/7;
-font-size: 230px;
+font-size: 180px;
 color:white;
 	font-family: 'Bebas Neue', cursive;
-margin-left: 100px;
-margin-top: 200px;
-opacity: 0.9;
+
+margin-top: 40px;
+margin-left: 20px;
+opacity: 0.85;
 border : 0px;
 
 }
@@ -355,8 +440,15 @@ border : 0px;
 }
 
 #line{
-  grid-column: 4/7;
-  grid-row: 3/4;
+  grid-column: 3/8;
+  grid-row: 5/7;
+  border : 1px solid white;
+  width : 100%;
+  opacity: 0;
+}
+#line_champs{
+  grid-column: 3/8;
+  grid-row: 5/7;
   border : 1px solid white;
   width : 100%;
   opacity: 0;
@@ -412,10 +504,13 @@ border : 0px;
 #marco_rose{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: start;
 	grid-column: 4/7;
 	grid-row: 3/7;
-	margin-top: 40px;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left: 40px;
+
 	text-align: center;
 }
 #director_img{
@@ -424,32 +519,97 @@ border : 0px;
 
 .player_img{
 	width: 220px;
+		z-index: 0;
 }
 
 .players{
+	z-index: 0;
+	margin-top : 30px;
+
+}
+
+
+
+#gf_flex_img{
+	z-index: 20;
+
+}
+
+.gf_stats{
+position: relative;
+display: inline-block;
+z-index: 10;
+
+
+
+}
+/* 이하 말풍선 */
+.gf_stats .tooltip_info{
+opacity: 0;
+	display: none;
+	visibility: hidden;
+	width: 200px;
+	height: 140px;
+	background-color: black;
+	color:#fff;
+	font-size: 14px;
+	font-family: 'noto sans', sans-serif;
+		font-weight: 400;
+	text-align: center;
+	padding:10px;
+	position: absolute;
+top:105%;
+border-radius: 6px;
 	z-index: 5;
-	margin-bottom: 10px;
+	line-height: 26px;
+
+}
+/* 이하 말풍선 화살표 */
+.gf_stats .tooltip_info::after{
+	content:"";
+	position: absolute;
+	top: -11%;
+	left:50%;
+	border-width:10px;
+	margin-left: -10px;
+	border-style: solid;
+	border-color: transparent  transparent black transparent;
+	z-index: 5;
+}
+
+.gf_stats:hover .tooltip_info{
+visibility: visible;
+opacity: 0.9;
+	display: block;
+		z-index: 5;
+
+
+}
+
 
 }
 .player_info{
 	color : black;
-	margin-bottom:  30px;
+	margin-bottom:  50px;
 	text-align: center;
 	font-size: 15px;
-	font-family: 'Noto sans KR', serif;
 	font-weight: 500;
 	vertical-align: center;
+
+
 }
 .player_info_flex{
 	display: flex;
 	justify-content: center;
-		font-family: 'Noto sans KR', serif;
 		font-size: 14px;
 		font-weight: 500;
+		margin-top: 15px;
+			font-family: 'Pretendard-Regular';
+			font-weight: 700;
 }
 
 .player_figure{
-	z-index: 5;
+	z-index: 0;
 	margin: 0;
 	display: inline;
 }
@@ -463,27 +623,62 @@ border : 0px;
 	visibility: hidden;
 	flex-grow: 1;
 	flex-direction: column;
-	grid-column: 4/7;
-	grid-row: 3/7;
+	grid-column: 3/8;
+	grid-row: 5/7;
 	overflow: scroll;
-	height: 690px;
+	height: 870px;
 	z-index: 5;
 	padding-right:10px;
 	padding-left: 10px;
 }
 
 #position_director{
-	display: flex;
-	justify-content: space-around;
-	grid-column: 4/7;
-	grid-row: 3/4;
+	justify-content: start;
+	grid-column: 3/7;
+	grid-row: 6/7;
 	color: black;
 	z-index: 5;
-	text-align: center;
-	margin-top: 30px;
-	font-family: 'Noto sans KR', serif;
+	text-align: left;
+	margin-top: 50px;
+	margin-left: 80px;
+		margin-right: 45px;
+	margin-bottom: 15px;
 	font-weight: 500;
+	padding-bottom: 10px;
+	border-bottom: 0.5px grey solid;
+
 }
+
+#marco_rose_flex{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#player_antecedents{
+	text-align: left;
+	line-height: 22px;
+	margin-top: 20px;
+	font-family: 'Pretendard-Regular';
+	font-weight: 700;
+}
+#coach_antecedents1{
+	text-align: left;
+	line-height: 22px;
+	margin-top: 20px;
+	font-family: 'Pretendard-Regular';
+	font-weight: 700;
+}
+#coach_antecedents2{
+	text-align: left;
+	line-height: 22px;
+	margin-top: 45px;
+	font-family: 'Pretendard-Regular';
+	font-weight: 700;
+}
+h2{
+	line-height: 5px;
+}
+
 #position_gf{
 	display: flex;
 	justify-content: space-around;
@@ -492,8 +687,8 @@ border : 0px;
 	color: black;
 	z-index: 5;
 	text-align: center;
-	margin-top: 30px;
-	font-family: 'Noto sans KR', serif;
+	margin-top: 50px;
+
 	font-weight: 500;
 
 
@@ -504,10 +699,10 @@ border : 0px;
 	grid-column: 4/7;
 	grid-row: 3/4;
 	color: black;
-	z-index: 5;
+	z-index: 2;
 	text-align: center;
-	margin-top: 30px;
-	font-family: 'Noto sans KR', serif;
+	margin-top: 100px;
+
 	font-weight: 500;
 }
 #position_mf{
@@ -518,8 +713,8 @@ border : 0px;
 	color: black;
 	z-index: 5;
 	text-align: center;
-	margin-top: 30px;
-	font-family: 'Noto sans KR', serif;
+	margin-top: 100px;
+
 	font-weight: 500;
 }
 #position_fw{
@@ -530,8 +725,9 @@ border : 0px;
 	color: black;
 	z-index: 5;
 	text-align: center;
-	margin-top: 30px;
-	font-family: 'Noto sans KR', serif;
+	margin-top: 100px;
+
+
 	font-weight: 500;
 }
 #gf{
@@ -543,7 +739,9 @@ border : 0px;
 	grid-row: 3/7;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin-top: 30px;
+	margin-top: 0;
+	z-index: 5;
+
 }
 #df{
 	display: flex;
@@ -570,17 +768,30 @@ border : 0px;
 	justify-content: space-evenly;
 	margin-top: 30px;
 	text-align: center;
+	margin-bottom: 50px;
 }
 .national_flag{
 	width : 25px;
-	margin-right:5px;
-	margin-top: 3px;
+	margin-right:6px;
+	margin-top: 0px;
 }
+
 .grid_flag{
 	align-self: center;
 	width:100px;
-
 }
+
+#position_fw,#position_df,#position_gf,#position_mf,#position_director{
+	font-family: 'Pretendard-Regular';
+	font-weight: 900;
+}
+
+
+
+
+
+
+
 
 @media (max-width : 1400px){
 	#grid_container{
@@ -1107,10 +1318,12 @@ border : 0px;
 	z-index: 5;
 	opacity: 0;
 	padding-left: 10px;
+	margin-bottom: 30px;
 
 }
 .player_img{
 	width: 180px;
+	margin-bottom: 20px;
 }
 #director_img{
 	width:150px;

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>burussia dortmund</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+</head>
+<body>
+  <script>
+  var gf_stat_json = [
+  {play_minute : 3.060, Save_percent : 67.9, clean_sheets : 6, ga90: 1.64},
+
+  {play_minute : 0, Save_percent : 0, clean_sheets : 0, ga90: 0},
+
+  {play_minute : 2.505, Save_percent : 70.5, clean_sheets : 11, ga90: 1.6},
+
+  {play_minute : 0, Save_percent : 0, clean_sheets : 0, ga90: 0},
+
+  {play_minute : 1665, Save_percent : 70.8, clean_sheets : 4, ga90: 1.62},
+
+  ];
+
+  var gf_array = new Array(5);
+
+  for(var i =0; i <4; i++)
+  {
+    gf_array[i] = new Array(4);
+  }
+
+
+for(var i =0; i < 4; i++)
+{
+  gf_array[i] =  Object.values(gf_stat_json[i]);
+}
+
+
+document.write(gf_array+'<br>');
+
+
+</script>
+
+<style>
+.table_header{
+  text-align: left;
+}
+.table_data{
+  text-align: center;
+}
+</style>
+
+<table>
+  <tr>
+	<th class = 'table_header' id = 'team'>출전시간(분)</th>
+  <td class = 'table_data'> : 1396</td>
+  <tr>
+    <tr>
+  	<th class = 'table_header' id = 'team'>선방율(%)</th>
+      <td class = 'table_data'> : 69.4</td>
+    <tr>
+      <tr>
+      <th class = 'table_header' id = 'team'>클린시트(개)</th>
+        <td class = 'table_data'> : 2</td>
+      <tr>
+        <tr>
+        <th class = 'table_header' id = 'team'>실점율(%)</th>
+          <td class = 'table_data'> : 1.42</td>
+        <tr>
+	<tbody id = 'add_table'>
+	</tbody>
+</table>
+</body>
+</html>

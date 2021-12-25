@@ -35,7 +35,7 @@
 <div id = 'top'></div>
 <!--엠블렘 -->
   <div class = 'item' id = 'emblem' >
-  <img id = 'emblem_img' onclick = "roll_back(); player_rollback();" src ="도르트문트 엠블렘.png">
+  <img id = 'emblem_img' onclick = "roll_back(); player_rollback(); champs_click_rollback();" src ="도르트문트 엠블렘.png">
   </div>
 
   <div id = 'sponsor_grid'>
@@ -52,15 +52,30 @@
 			league_click_dark();
 			box_line();
 			add_row();
-			player_rollback()">LEAGUE
+			player_rollback();
+      ">LEAGUE
 		</div>
 
-    <div class = 'flex1_item'>CHAMPS</div>
+    <div class = 'flex1_item' id = 'champs' onclick ="
+    add_champs_a_row();
+    add_champs_b_row();
+    add_champs_c_row();
+    add_champs_d_row();
+    champs_click();
+    league_click_dark();
+    ">CHAMPS</div>
+
+
 
     <div class = 'flex1_item'>FOKAL</div>
 
+
     <div class = 'flex1_item' id = 'player' onclick = "
- roll_back();	player_click(); player_list(); league_click_dark();">PLAYERS</div>
+     roll_back();
+     player_click();
+     player_list();
+     league_click_dark();
+     ">PLAYERS</div>
 
     <div class = 'flex1_item'>SHOP</div>
 
@@ -68,7 +83,14 @@
 
 
 <div id = 'player_flex'>
+
+  <div id = 'director flex'>
 		<div id = 'position_director'>감독</div>
+    <div id = 'position_contour'></div>
+  </div>
+
+
+<div id = 'marco_rose_flex'>
 	<div id = 'marco_rose'>
 		<figure id = 'director' class = 'player_figure'>
 			<div class = 'players'><img  id = 'director_img' src = '도르트문트 1군 선수 명단/마르코 로제.png'></div>
@@ -80,51 +102,86 @@
 </figure>
 </div>
 
+<div id = 'player_antecedents'>
+<h2>선수 경력 -</h2>
+VfB 라이프치히 (~2000 / 유스)<br>
+VfB 라이프치히 (1995~2000)<br>
+하노버 96 (2000~2004)<br>
+→ 1. FSV 마인츠 05 (2002~2004 / 임대)<br>
+1. FSV 마인츠 05 (2004~2010)<br>
+1. FSV 마인츠 05 II (2010~2011)
+</div>
+<div id = 'coach_antecedents1'>
+  <h2>지도자 경력 -</h2>
+  1. FSV 마인츠 05 (2009 / 수석 코치)<br>
+  1. FSV 마인츠 05 II (2010~2012 / 수석 코치)<br>
+  1. FC Lok. 라이프치히 (2012~2013)<br>
+  레드불 잘츠부르크 U-16 (2013~2015)<br>
+  레드불 잘츠부르크 U-17 (2015~2017)<br>
+  레드불 잘츠부르크 U-19 (2016~2017)<br>
+</div>
+<div id = 'coach_antecedents2'>
+  <h2></h2>
+  레드불 잘츠부르크 (2017~2019)<br>
+  보루시아 묀헨글라트바흐 (2019~2021)<br>
+  보루시아 도르트문트 (2021~ )
+</div>
+</div>
+
+
+
 <div id = 'position_gf'>GF</div>
 <div id = 'gf'>
-	<figure class = 'player_figure'>
-		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/그레고어 코벨.png'></div>
+	<figure id = 'gf_flex_img' class = 'player_figure  gf_stats'>
+		<div  class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/그레고어 코벨.png'></div>
 
-		<div class = 'player_info_flex'>
-			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
-			<div class = 'player_name'> | 그레고어 코벨</div>
+  	<div class = 'player_info_flex'>
+  	  <img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'>
+  	  <div class = 'player_name'> | 그레고어 코벨</div>
 		</div>
+
+    <span class = 'tooltip_info'><20/21시즌><br>출전시간(분) : 1336<Br>선방율(%) : 69.4<br> 클린시트 : 2개<br>경기당 평균 실점 : 1.64</span>
 	</figure>
 
-	<figure class = 'player_figure'>
-	<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/루카 운베하운.png'></div>
 
-	<div class = 'player_info_flex'>
-		<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
-		<div class = 'player_name'> | 루카 운베하운</div>
-	</div>
+	<figure id = 'gf_flex_img' class = 'player_figure  gf_stats'>
+  	<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/루카 운베하운.png'></div>
+
+  	<div class = 'player_info_flex'>
+      <span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
+      <div class = 'player_name'> | 루카 운베하운</div>
+  	</div>
+
+    <span class = 'tooltip_info'><20/21시즌><br>출전시간(분) : 0<Br>선방율(%) : 0<br> 클린시트 : 0<br>경기당 평균 실점 : 0</span>
 	</figure>
 
-	<figure class = 'player_figure'>
+	<figure id = 'gf_flex_img' class = 'player_figure  gf_stats'>
 			<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/마르빈 히츠.png'></div>
-
 			<div class = 'player_info_flex'>
 				<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
 				<div class = 'player_name'> | 마르빈 히츠</div>
 			</div>
+          <span class = 'tooltip_info'><20/21시즌><br>출전시간(분) : 2505<Br>선방율(%) : 70.5<br> 클린시트 : 11개<br>경기당 평균 실점 : 1.6</span>
 </figure>
 
-<figure class = 'player_figure'>
+<figure  class = 'player_figure  gf_stats'>
 		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/스테판 드라차.png'></div>
 
 		<div class = 'player_info_flex'>
 			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
 			<div class = 'player_name'> | 스테판 드라차</div>
 		</div>
+      <span class = 'tooltip_info'><20/21시즌><br>출전시간(분) : 0<Br>선방율(%) : 0<br> 클린시트 : 0<br>경기당 평균 실점 : 0</span>
 </figure>
 
-<figure class = 'player_figure'>
+<figure class = 'player_figure  gf_stats'>
 		<div class = 'players'><img class = 'player_img' src = '도르트문트 1군 선수 명단/로만 뷔르키.png'></div>
 
 		<div class = 'player_info_flex'>
 			<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/스위스.svg'> </span>
 			<div class = 'player_name'> | 로만 뷔르키</div>
 		</div>
+        <span class = 'tooltip_info'><20/21시즌><br>출전시간(분) : 1665<Br>선방율(%) : 70.8<br> 클린시트 : 4개<br>경기당 평균 실점 : 1.62</span>
 </figure>
 </div>
 
@@ -333,7 +390,7 @@
 
 					<div class = 'player_info_flex'>
 					<span class = 'player_info'><img class ='national_flag' src ='도르트문트1군 선수 국기/독일.svg'> </span>
-			<div class = 'player_name'> | 안토니오스<br>파파도풀로스</div>
+			<div class = 'player_name'> | 안토니오스 파파도풀로스</div>
 				</div>
 			</figure>
 
@@ -451,31 +508,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div id = 'line'></div>
 <div id = 'line_player'></div>
+<div id = 'line_champs'></div>
   <div class = 'item'></div>
     <div id = 'stdm_inside'></div>
 
 
 <div id = 'top_bar'></div>
-<div id='full_name'>ECHTE LIEBE.</div>
+<div id='full_name'>Olé, jetzt kommt Der BVB</div>
 <div id='footer'></div>
 <div id = 'top_icon'><a href = "#top"><img src = "top_icon.svg" width = 50px;></a>
 </div>
@@ -492,7 +533,67 @@
 	<tbody id = 'add_table'>
 	</tbody>
 </table>
-<div id = 'ole'>Olé,<br>jetzt kommt<br>Der BVB</div>
+<div id = 'champs_flex'>
+  <div class = 'group'>A조 - </div>
+<table id class = 'champs_info' = 'champs_container_a'>
+	<th class = 'table_header' id = 'team'>팀</th>
+	<th class = 'table_header' id = 'round'>경기수</th>
+	<th class = 'table_header' id = 'win'>승</th>
+	<th class = 'table_header' id = 'draw'>무</th>
+	<th class = 'table_header' id = 'defeat'>패</th>
+	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'table_header' id = 'lose'>실점</th>
+	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'table_header' id = 'score'>승점</th>
+	<tbody id = 'champs_add_table_a'>
+	</tbody>
+</table>
+  <div class = 'group'>B조 - </div>
+<table class = 'champs_info' id = 'champs_container_b' >
+	<th class = 'table_header' id = 'team'>팀</th>
+	<th class = 'table_header' id = 'round'>경기수</th>
+	<th class = 'table_header' id = 'win'>승</th>
+	<th class = 'table_header' id = 'draw'>무</th>
+	<th class = 'table_header' id = 'defeat'>패</th>
+	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'table_header' id = 'lose'>실점</th>
+	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'table_header' id = 'score'>승점</th>
+	<tbody id = 'champs_add_table_b'>
+	</tbody>
+</table>
+  <div class = 'group'>C조 - </div>
+<table class = 'champs_info' id = 'champs_container_c'>
+	<th class = 'table_header' id = 'team'>팀</th>
+	<th class = 'table_header' id = 'round'>경기수</th>
+	<th class = 'table_header' id = 'win'>승</th>
+	<th class = 'table_header' id = 'draw'>무</th>
+	<th class = 'table_header' id = 'defeat'>패</th>
+	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'table_header' id = 'lose'>실점</th>
+	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'table_header' id = 'score'>승점</th>
+	<tbody id = 'champs_add_table_c'>
+	</tbody>
+</table>
+  <div class = 'group'>D조 - </div>
+<table class = 'champs_info' id = 'champs_container_d'>
+	<th class = 'table_header' id = 'team'>팀</th>
+	<th class = 'table_header' id = 'round'>경기수</th>
+	<th class = 'table_header' id = 'win'>승</th>
+	<th class = 'table_header' id = 'draw'>무</th>
+	<th class = 'table_header' id = 'defeat'>패</th>
+	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'table_header' id = 'lose'>실점</th>
+	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'table_header' id = 'score'>승점</th>
+	<tbody id = 'champs_add_table_d'>
+	</tbody>
+</table>
+</div>
+
+
+<div id = 'ole'>ECHTE LIEBE</div>
 
 
 </div>
