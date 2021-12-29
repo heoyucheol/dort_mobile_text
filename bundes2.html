@@ -27,7 +27,9 @@
       <div id = 'facebook'><a href="https://www.facebook.com/BVB/" target="_blank"><img  src = 'facebook.svg' width = 12px;></a></div>
     <div id = 'twitter'><a href="https://www.facebook.com/BVB/" target="_blank"><img  src = 'twitter.svg' width = 28px;></a></div>
     </div>
-
+<audio autoplay controls>
+  <source src = 'am borsigplatz geboren.mp3' type = 'audio/mp3'>
+</audio>
     <div id = 'bg_img'></div>
   <!-- <div id = 'Echte_Liebe'>Ballspiel-Verein Borussia 09 e. V. Dortmund</div> -->
 
@@ -35,7 +37,7 @@
 <div id = 'top'></div>
 <!--엠블렘 -->
   <div class = 'item' id = 'emblem' >
-  <img id = 'emblem_img' onclick = "roll_back(); player_rollback(); champs_click_rollback();" src ="도르트문트 엠블렘.png">
+  <img id = 'emblem_img' onclick = "roll_back(); player_rollback();  champs_click_rollback()" src ="도르트문트 엠블렘.png">
   </div>
 
   <div id = 'sponsor_grid'>
@@ -53,6 +55,7 @@
 			box_line();
 			add_row();
 			player_rollback();
+      champs_click_rollback();
       ">LEAGUE
 		</div>
 
@@ -61,13 +64,20 @@
     add_champs_b_row();
     add_champs_c_row();
     add_champs_d_row();
+    add_champs_e_row();
+    add_champs_f_row();
+    add_champs_g_row();
+    add_champs_h_row();
+    champs_info();
+    roll_back();
+    player_rollback();
     champs_click();
     league_click_dark();
     ">CHAMPS</div>
 
 
 
-    <div class = 'flex1_item'>FOKAL</div>
+    <div class = 'flex1_item'>POKAL</div>
 
 
     <div class = 'flex1_item' id = 'player' onclick = "
@@ -75,6 +85,8 @@
      player_click();
      player_list();
      league_click_dark();
+     champs_click_rollback();
+
      ">PLAYERS</div>
 
     <div class = 'flex1_item'>SHOP</div>
@@ -520,7 +532,8 @@ VfB 라이프치히 (1995~2000)<br>
 <div id='footer'></div>
 <div id = 'top_icon'><a href = "#top"><img src = "top_icon.svg" width = 50px;></a>
 </div>
-<table id = 'table_container' height = '10px'>
+<table id = 'table_container'>
+  <th class = 'table_header' id = 'logo'></th>
 	<th class = 'table_header' id = 'team'>팀</th>
 	<th class = 'table_header' id = 'round'>경기수</th>
 	<th class = 'table_header' id = 'win'>승</th>
@@ -534,61 +547,125 @@ VfB 라이프치히 (1995~2000)<br>
 	</tbody>
 </table>
 <div id = 'champs_flex'>
-  <div class = 'group'>A조 - </div>
-<table id class = 'champs_info' = 'champs_container_a'>
-	<th class = 'table_header' id = 'team'>팀</th>
-	<th class = 'table_header' id = 'round'>경기수</th>
-	<th class = 'table_header' id = 'win'>승</th>
-	<th class = 'table_header' id = 'draw'>무</th>
-	<th class = 'table_header' id = 'defeat'>패</th>
-	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
-	<th class = 'table_header' id = 'lose'>실점</th>
-	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
-	<th class = 'table_header' id = 'score'>승점</th>
+  <div class = 'group a'>A조</div>
+<table class = 'champs_info' id = 'champs_container_a'>
+  <th class = 'champs_header' id = 'logo'></th>
+	<th class = 'champs_header' id = 'team'>팀</th>
+	<th class = 'champs_header' id = 'round'>경기수</th>
+	<th class = 'champs_header' id = 'win'>승</th>
+	<th class = 'champs_header' id = 'draw'>무</th>
+	<th class = 'champs_header' id = 'defeat'>패</th>
+	<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'champs_header' id = 'lose'>실점</th>
+	<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'champs_header' id = 'score'>승점</th>
 	<tbody id = 'champs_add_table_a'>
 	</tbody>
 </table>
-  <div class = 'group'>B조 - </div>
+  <div class = 'group'>B조</div>
 <table class = 'champs_info' id = 'champs_container_b' >
-	<th class = 'table_header' id = 'team'>팀</th>
-	<th class = 'table_header' id = 'round'>경기수</th>
-	<th class = 'table_header' id = 'win'>승</th>
-	<th class = 'table_header' id = 'draw'>무</th>
-	<th class = 'table_header' id = 'defeat'>패</th>
-	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
-	<th class = 'table_header' id = 'lose'>실점</th>
-	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
-	<th class = 'table_header' id = 'score'>승점</th>
+  <th class = 'champs_header' id = 'logo'></th>
+	<th class = 'champs_header' id = 'team'>팀</th>
+	<th class = 'champs_header' id = 'round'>경기수</th>
+	<th class = 'champs_header' id = 'win'>승</th>
+	<th class = 'champs_header' id = 'draw'>무</th>
+	<th class = 'champs_header' id = 'defeat'>패</th>
+	<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'champs_header' id = 'lose'>실점</th>
+	<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'champs_header' id = 'score'>승점</th>
 	<tbody id = 'champs_add_table_b'>
 	</tbody>
 </table>
-  <div class = 'group'>C조 - </div>
+  <div class = 'group'>C조</div>
 <table class = 'champs_info' id = 'champs_container_c'>
-	<th class = 'table_header' id = 'team'>팀</th>
-	<th class = 'table_header' id = 'round'>경기수</th>
-	<th class = 'table_header' id = 'win'>승</th>
-	<th class = 'table_header' id = 'draw'>무</th>
-	<th class = 'table_header' id = 'defeat'>패</th>
-	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
-	<th class = 'table_header' id = 'lose'>실점</th>
-	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
-	<th class = 'table_header' id = 'score'>승점</th>
+  <th class = 'champs_header' id = 'logo'></th>
+	<th class = 'champs_header' id = 'team'>팀</th>
+	<th class = 'champs_header' id = 'round'>경기수</th>
+	<th class = 'champs_header' id = 'win'>승</th>
+	<th class = 'champs_header' id = 'draw'>무</th>
+	<th class = 'champs_header' id = 'defeat'>패</th>
+	<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'champs_header' id = 'lose'>실점</th>
+	<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+	<th class = 'champs_header' id = 'score'>승점</th>
 	<tbody id = 'champs_add_table_c'>
 	</tbody>
 </table>
-  <div class = 'group'>D조 - </div>
+  <div class = 'group'>D조</div>
 <table class = 'champs_info' id = 'champs_container_d'>
-	<th class = 'table_header' id = 'team'>팀</th>
-	<th class = 'table_header' id = 'round'>경기수</th>
-	<th class = 'table_header' id = 'win'>승</th>
-	<th class = 'table_header' id = 'draw'>무</th>
-	<th class = 'table_header' id = 'defeat'>패</th>
-	<th class = 'table_header' id = 'goal' width = 40px;>득점</th>
-	<th class = 'table_header' id = 'lose'>실점</th>
-	<th class = 'table_header' id = 'gd' width = 50px;>골득실</th>
-	<th class = 'table_header' id = 'score'>승점</th>
+  <th class = 'champs_header' id = 'logo'></th>
+  <th class = 'champs_header' id = 'team'>팀</th>
+  <th class = 'champs_header' id = 'round'>경기수</th>
+  <th class = 'champs_header' id = 'win'>승</th>
+  <th class = 'champs_header' id = 'draw'>무</th>
+	<th class = 'champs_header' id = 'defeat'>패</th>
+	<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+	<th class = 'champs_header' id = 'lose'>실점</th>
+	<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+  <th class = 'champs_header' id = 'score'>승점</th>
 	<tbody id = 'champs_add_table_d'>
 	</tbody>
+</table>
+<div class = 'group'>E조</div>
+<table class = 'champs_info' id = 'champs_container_e'>
+<th class = 'champs_header' id = 'logo'></th>
+<th class = 'champs_header' id = 'team'>팀</th>
+<th class = 'champs_header' id = 'round'>경기수</th>
+<th class = 'champs_header' id = 'win'>승</th>
+<th class = 'champs_header' id = 'draw'>무</th>
+<th class = 'champs_header' id = 'defeat'>패</th>
+<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+<th class = 'champs_header' id = 'lose'>실점</th>
+<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+<th class = 'champs_header' id = 'score'>승점</th>
+<tbody id = 'champs_add_table_e'>
+</tbody>
+</table>
+<div class = 'group'>F조</div>
+<table class = 'champs_info' id = 'champs_container_f' >
+<th class = 'champs_header' id = 'logo'></th>
+<th class = 'champs_header' id = 'team'>팀</th>
+<th class = 'champs_header' id = 'round'>경기수</th>
+<th class = 'champs_header' id = 'win'>승</th>
+<th class = 'champs_header' id = 'draw'>무</th>
+<th class = 'champs_header' id = 'defeat'>패</th>
+<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+<th class = 'champs_header' id = 'lose'>실점</th>
+<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+<th class = 'champs_header' id = 'score'>승점</th>
+<tbody id = 'champs_add_table_f'>
+</tbody>
+</table>
+<div class = 'group'>G조</div>
+<table class = 'champs_info' id = 'champs_container_g'>
+<th class = 'champs_header' id = 'logo'></th>
+<th class = 'champs_header' id = 'team'>팀</th>
+<th class = 'champs_header' id = 'round'>경기수</th>
+<th class = 'champs_header' id = 'win'>승</th>
+<th class = 'champs_header' id = 'draw'>무</th>
+<th class = 'champs_header' id = 'defeat'>패</th>
+<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+<th class = 'champs_header' id = 'lose'>실점</th>
+<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+<th class = 'champs_header' id = 'score'>승점</th>
+<tbody id = 'champs_add_table_g'>
+</tbody>
+</table>
+<div class = 'group'>H조</div>
+<table class = 'champs_info' id = 'champs_container_h'>
+<th class = 'champs_header' id = 'logo'></th>
+<th class = 'champs_header' id = 'team'>팀</th>
+<th class = 'champs_header' id = 'round'>경기수</th>
+<th class = 'champs_header' id = 'win'>승</th>
+<th class = 'champs_header' id = 'draw'>무</th>
+<th class = 'champs_header' id = 'defeat'>패</th>
+<th class = 'champs_header' id = 'goal' width = 40px;>득점</th>
+<th class = 'champs_header' id = 'lose'>실점</th>
+<th class = 'champs_header' id = 'gd' width = 50px;>골득실</th>
+<th class = 'champs_header' id = 'score'>승점</th>
+<tbody id = 'champs_add_table_h'>
+</tbody>
 </table>
 </div>
 
